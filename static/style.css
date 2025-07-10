@@ -1,0 +1,111 @@
+/* ===== Body with Background Image ===== */
+body {
+    background: url('/static/student_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* ===== Main Transparent Container ===== */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.75); /* more transparent */
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 2px solid #ce93d8; /* light purple border */
+}
+
+/* ===== Heading ===== */
+h1 {
+    text-align: center;
+    color: #6a1b9a; /* deep purple */
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* ===== Grid Layout for Form ===== */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ===== Labels ===== */
+label {
+    font-weight: 600;
+    color: #4a148c; /* dark purple text */
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Inputs and Dropdowns ===== */
+input[type="number"],
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e1bee7;
+    background-color: rgba(243, 229, 245, 0.9); /* light lavender */
+    font-size: 14px;
+    color: #4a148c;
+}
+
+/* ===== Submit Button ===== */
+input[type="submit"] {
+    grid-column: span 2;
+    padding: 12px;
+    background-color: #8e24aa; /* medium purple */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #6a1b9a; /* deep purple on hover */
+}
+
+/* ===== Prediction Result ===== */
+.result {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 18px;
+    color: #2e7d32;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* ===== Footer Box ===== */
+.footer-box {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ab47bc, #6a1b9a);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(186, 104, 200, 0.4);
+    transition: all 0.3s ease;
+}
+
+.footer-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(171, 71, 188, 0.5);
+}

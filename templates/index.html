@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Student Performance Predictor</h1>
+
+        <form action="/predict" method="POST">
+            <div class="field-group">
+                <label>Hours Studied:</label>
+                <input type="number" step="0.1" name="hours" required>
+            </div>
+
+            <div class="field-group">
+                <label>Previous Scores:</label>
+                <input type="number" step="0.1" name="previous" required>
+            </div>
+
+            <div class="field-group">
+                <label>Extracurricular Activities:</label>
+                <select name="activity" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label>Sleep Hours:</label>
+                <input type="number" step="0.1" name="sleep" required>
+            </div>
+
+            <div class="field-group">
+                <label>Sample Question Papers Practiced:</label>
+                <input type="number" step="1" name="papers" required>
+            </div>
+
+            <!-- Empty div to balance grid layout -->
+            <div></div>
+
+            <input type="submit" value="Predict">
+
+            {% if prediction_text %}
+                <p class="result">{{ prediction_text }}</p>
+            {% endif %}
+        </form>
+
+        <div class="footer-box">
+            Predicting brighter futures,by — <strong>Snehal</strong>
+        </div>
+    </div>
+</body>
+</html>
